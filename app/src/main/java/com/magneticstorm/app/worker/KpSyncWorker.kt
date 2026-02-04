@@ -12,7 +12,9 @@ import androidx.work.WorkerParameters
 import com.magneticstorm.app.MainActivity
 import com.magneticstorm.app.R
 import com.magneticstorm.app.data.preferences.PreferencesManager
+import com.magneticstorm.app.widget.WidgetUpdateHelper
 import com.magneticstorm.app.data.repository.KpRepository
+import com.magneticstorm.app.data.util.formatKp
 import kotlinx.coroutines.flow.first
 
 private const val CHANNEL_ID = "magnetic_storm_alerts"
@@ -34,6 +36,8 @@ class KpSyncWorker(
 
             val result = kpRepository.getForecast().getOrNull() ?: return Result.retry()
             val current = kpRepository.currentKpForNow(result) ?: return Result.success()
+
+            WidgetUpdateHelper.saveAndUpdateWidget(applicationContext, current.kp)
 
             val notificationsEnabled = prefs.notificationEnabled.first()
             if (!notificationsEnabled) return Result.success()
@@ -72,7 +76,7 @@ class KpSyncWorker(
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
         val title = applicationContext.getString(R.string.notification_title)
-        val body = applicationContext.getString(R.string.notification_body, kp.toString().take(3))
+        val body = applicationContext.getString(R.string.notification_body, formatKp(kp))
         val notification = NotificationCompat.Builder(applicationContext, channelId)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setContentTitle(title)

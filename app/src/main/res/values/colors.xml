@@ -2,4 +2,12 @@
 <resources>
     <color name="background_light">#FFF8FAFC</color>
     <color name="background_dark">#FF0F1216</color>
+    <!-- Віджет: сучасний світлий стиль -->
+    <color name="widget_bg_start">#FFE8F0FA</color>
+    <color name="widget_bg_end">#FFFFFFFF</color>
+    <color name="widget_highlight">#18FFFFFF</color>
+    <color name="widget_highlight_end">#00000000</color>
+    <color name="widget_accent">#FF1565C0</color>
+    <color name="widget_label_color">#FF5C6578</color>
+    <color name="widget_updated_color">#FF8A8F99</color>
 </resources>

@@ -32,4 +32,7 @@
     <string name="notification_channel_name">Магнітні бурі</string>
     <string name="notification_title">Висока магнітна активність</string>
     <string name="notification_body">Поточний Kp: %1$s. Рекомендується обережність.</string>
+    <string name="widget_label">Магнітні бурі</string>
+    <string name="widget_updated_format">Оновлено %1$s</string>
+    <string name="widget_description">Поточний індекс Kp магнітних бурь</string>
 </resources>

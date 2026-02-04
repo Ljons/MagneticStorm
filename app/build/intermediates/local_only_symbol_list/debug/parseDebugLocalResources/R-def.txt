@@ -2,8 +2,21 @@ R_DEF: Internal format may change without notice
 local
 color background_dark
 color background_light
+color widget_accent
+color widget_bg_end
+color widget_bg_start
+color widget_highlight
+color widget_highlight_end
+color widget_label_color
+color widget_updated_color
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable widget_background
+id widget_kp_value
+id widget_label
+id widget_root
+id widget_updated
+layout widget_kp
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
@@ -37,5 +50,9 @@ string theme_light
 string theme_system
 string today_level
 string type_to_search
+string widget_description
+string widget_label
+string widget_updated_format
 string your_location
 style Theme.MagneticStorm
+xml app_widget_info

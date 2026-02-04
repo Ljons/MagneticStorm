@@ -46,6 +46,7 @@ import androidx.compose.ui.unit.dp
 import com.magneticstorm.app.R
 import com.magneticstorm.app.data.model.KpRecord
 import com.magneticstorm.app.data.model.KpScale
+import com.magneticstorm.app.data.util.formatKp
 import com.magneticstorm.app.data.model.SavedLocation
 import com.magneticstorm.app.data.model.StormCategory
 import com.magneticstorm.app.ui.theme.KpExtreme
@@ -250,7 +251,7 @@ private fun CurrentKpCard(kp: KpRecord, timeZoneId: String) {
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            kp.kp.toString().take(3),
+                            formatKp(kp.kp),
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold,
                             color = Color.White
@@ -259,7 +260,7 @@ private fun CurrentKpCard(kp: KpRecord, timeZoneId: String) {
                     Spacer(Modifier.size(16.dp))
                     Column {
                         Text(
-                            "Kp ${kp.kp.toString().take(3)}",
+                            "Kp ${formatKp(kp.kp)}",
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface
@@ -339,7 +340,7 @@ private fun DayForecastCard(
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            maxKp.toString().take(3),
+                            formatKp(maxKp),
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
                             color = Color.White
@@ -370,7 +371,7 @@ private fun DayForecastCard(
                             )
                     ) {
                         Text(
-                            text = record?.kp?.toString()?.take(3) ?: "—",
+                            text = record?.kp?.let { formatKp(it) } ?: "—",
                             style = MaterialTheme.typography.labelSmall,
                             color = if (record != null) Color.White else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
                             modifier = Modifier.align(Alignment.Center)

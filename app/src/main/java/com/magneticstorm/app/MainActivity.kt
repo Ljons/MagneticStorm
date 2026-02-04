@@ -10,8 +10,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import com.magneticstorm.app.widget.WidgetUpdateHelper
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -37,6 +39,11 @@ class MainActivity : ComponentActivity() {
             val notificationPermissionLauncher = rememberLauncherForActivityResult(
                 ActivityResultContracts.RequestPermission()
             ) { }
+            LaunchedEffect(uiState.currentKp) {
+                uiState.currentKp?.let { kp ->
+                    WidgetUpdateHelper.saveAndUpdateWidget(app.applicationContext, kp.kp)
+                }
+            }
             MagneticStormTheme(darkTheme = darkTheme) {
                 AppNavHost(
                     viewModel = app.mainViewModel,

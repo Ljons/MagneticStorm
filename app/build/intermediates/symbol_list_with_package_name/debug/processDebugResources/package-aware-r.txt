@@ -52,6 +52,13 @@ color notification_action_color_filter
 color notification_icon_bg_color
 color vector_tint_color
 color vector_tint_theme_color
+color widget_accent
+color widget_bg_end
+color widget_bg_start
+color widget_highlight
+color widget_highlight_end
+color widget_label_color
+color widget_updated_color
 dimen compat_button_inset_horizontal_material
 dimen compat_button_inset_vertical_material
 dimen compat_button_padding_horizontal_material
@@ -95,6 +102,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable widget_background
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -182,6 +190,10 @@ id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id widget_kp_value
+id widget_label
+id widget_root
+id widget_updated
 id wrapped_composition_tag
 integer status_bar_notification_info_maxnum
 layout custom_dialog
@@ -193,6 +205,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout widget_kp
 mipmap ic_launcher
 mipmap ic_launcher_round
 string androidx_startup
@@ -310,6 +323,9 @@ string today_level
 string tooltip_description
 string tooltip_label
 string type_to_search
+string widget_description
+string widget_label
+string widget_updated_format
 string your_location
 style DialogWindowTheme
 style FloatingDialogTheme
@@ -336,3 +352,4 @@ styleable NavGraphNavigator startDestination
 styleable NavHost navGraph
 styleable NavInclude graph
 styleable Navigator android_label android_id route
+xml app_widget_info

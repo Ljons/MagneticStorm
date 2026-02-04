@@ -2,6 +2,13 @@
 <resources>
     <color name="background_dark">#FF0F1216</color>
     <color name="background_light">#FFF8FAFC</color>
+    <color name="widget_accent">#FF1565C0</color>
+    <color name="widget_bg_end">#FFFFFFFF</color>
+    <color name="widget_bg_start">#FFE8F0FA</color>
+    <color name="widget_highlight">#18FFFFFF</color>
+    <color name="widget_highlight_end">#00000000</color>
+    <color name="widget_label_color">#FF5C6578</color>
+    <color name="widget_updated_color">#FF8A8F99</color>
     <string name="app_name">Магнітні бурі</string>
     <string name="back">Назад</string>
     <string name="choose_location">Обрати локацію</string>
@@ -33,6 +40,9 @@
     <string name="theme_system">Як у системи</string>
     <string name="today_level">Рівень на сьогодні</string>
     <string name="type_to_search">Введіть місто та країну для пошуку</string>
+    <string name="widget_description">Поточний індекс Kp магнітних бурь</string>
+    <string name="widget_label">Магнітні бурі</string>
+    <string name="widget_updated_format">Оновлено %1$s</string>
     <string name="your_location">Ваша локація</string>
     <style name="Theme.MagneticStorm" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>

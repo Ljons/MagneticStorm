@@ -13,6 +13,13 @@
     <color name="call_notification_decline_color">#d93025</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="widget_accent">#FF1565C0</color>
+    <color name="widget_bg_end">#FFFFFFFF</color>
+    <color name="widget_bg_start">#FFE8F0FA</color>
+    <color name="widget_highlight">#18FFFFFF</color>
+    <color name="widget_highlight_end">#00000000</color>
+    <color name="widget_label_color">#FF5C6578</color>
+    <color name="widget_updated_color">#FF8A8F99</color>
     <dimen name="compat_button_inset_horizontal_material">4dp</dimen>
     <dimen name="compat_button_inset_vertical_material">6dp</dimen>
     <dimen name="compat_button_padding_horizontal_material">8dp</dimen>
@@ -222,6 +229,9 @@
     <string name="tooltip_description">tooltip</string>
     <string name="tooltip_label">show tooltip</string>
     <string name="type_to_search">Введіть місто та країну для пошуку</string>
+    <string name="widget_description">Поточний індекс Kp магнітних бурь</string>
+    <string name="widget_label">Магнітні бурі</string>
+    <string name="widget_updated_format">Оновлено %1$s</string>
     <string name="your_location">Ваша локація</string>
     <style name="DialogWindowTheme">
         <item name="android:windowClipToOutline">false</item>
@@ -288,23 +298,14 @@
         <attr format="reference" name="fontProviderCerts"/>
         
         <attr name="fontProviderFetchStrategy">
-            <!-- The blocking font fetch works as follows.
-              First, check the local cache, then if the requested font is not cached, request the
-              font from the provider and wait until it is finished.  You can change the length of
-              the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
-              default typeface will be used instead. -->
+            
             <enum name="blocking" value="0"/>
-            <!-- The async font fetch works as follows.
-              First, check the local cache, then if the requeted font is not cached, trigger a
-              request the font and continue with layout inflation. Once the font fetch succeeds, the
-              target text view will be refreshed with the downloaded font data. The
-              fontProviderFetchTimeout will be ignored if async loading is specified. -->
+            
             <enum name="async" value="1"/>
         </attr>
         
         <attr format="integer" name="fontProviderFetchTimeout">
-            <!-- A special value for the timeout. In this case, the blocking font fetching will not
-              timeout and wait until a reply is received from the font provider. -->
+            
             <enum name="forever" value="-1"/>
         </attr>
         
