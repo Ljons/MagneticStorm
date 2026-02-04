@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Магнітні бурі</string>
+    <string name="location">Локація</string>
+    <string name="settings">Налаштування</string>
+    <string name="your_location">Ваша локація</string>
+    <string name="choose_location">Обрати локацію</string>
+    <string name="city_country_hint">Місто, країна (наприклад: Київ, Україна)</string>
+    <string name="type_to_search">Введіть місто та країну для пошуку</string>
+    <string name="searching">Пошук…</string>
+    <string name="no_results">Нічого не знайдено</string>
+    <string name="back">Назад</string>
+    <string name="loading">Завантаження даних…</string>
+    <string name="retry">Повторити</string>
+    <string name="today_level">Рівень на сьогодні</string>
+    <string name="forecast_days">Прогноз на кілька днів</string>
+    <string name="forecast_label">Прогноз</string>
+    <string name="theme">Тема</string>
+    <string name="theme_system">Як у системи</string>
+    <string name="theme_light">Світла</string>
+    <string name="theme_dark">Темна</string>
+    <string name="info_section_title">Джерела даних та шкала Kp</string>
+    <string name="info_data_source">Дані про магнітні бурі (Kp-індекс і прогноз) надходять з NOAA Space Weather Prediction Center (США). Локації для вибору міста — з OpenStreetMap (Nominatim).</string>
+    <string name="info_kp_what">Kp — планетарний геомагнітний індекс. Він показує активність магнітного поля Землі, збурену сонячним вітром.</string>
+    <string name="info_kp_scale">Шкала Kp: від 0 (спокій) до 9 (екстремальна буря). Значення оновлюються кожні 3 години. Позначки G1–G5 (NOAA) відповідають сильним бурям при Kp 5 і вище.</string>
+    <string name="refresh_section_title">Оновлення даних</string>
+    <string name="refresh_on_open">При відкритті додатку</string>
+    <string name="refresh_background">Автоматично на фоні</string>
+    <string name="notification_section_title">Сповіщення при високому Kp</string>
+    <string name="notification_enabled_label">Повідомляти, коли Kp досягає або перевищує поріг</string>
+    <string name="notification_threshold_label">Поріг Kp (1–9):</string>
+    <string name="notification_channel_name">Магнітні бурі</string>
+    <string name="notification_title">Висока магнітна активність</string>
+    <string name="notification_body">Поточний Kp: %1$s. Рекомендується обережність.</string>
+</resources>
