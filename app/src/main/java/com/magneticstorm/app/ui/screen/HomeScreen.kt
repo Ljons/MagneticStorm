@@ -136,7 +136,12 @@ fun HomeScreen(
                         }
                         state.currentKp?.let { kp ->
                             item {
-                                CurrentKpCard(kp = kp, timeZoneId = state.location.timeZoneId)
+                                val todayRecords = state.forecastByDay[state.todayForLocation] ?: emptyList()
+                                CurrentKpCard(
+                                    kp = kp,
+                                    timeZoneId = state.location.timeZoneId,
+                                    hourlyRecords = todayRecords
+                                )
                             }
                         }
                         if (state.forecastByDay.isNotEmpty()) {
@@ -150,7 +155,11 @@ fun HomeScreen(
                                 )
                             }
                             items(
-                                state.forecastByDay.entries.toList().sortedByDescending { it.key },
+                                state.forecastByDay.entries.toList().let { entries ->
+                                    val today = state.todayForLocation ?: ""
+                                    val (future, todayAndPast) = entries.partition { it.key > today }
+                                    future.sortedBy { it.key } + todayAndPast.sortedByDescending { it.key }
+                                },
                                 key = { it.key }
                             ) { entry ->
                                 DayForecastCard(
@@ -216,9 +225,10 @@ private fun LocationCard(location: SavedLocation, onClick: () -> Unit) {
 }
 
 @Composable
-private fun CurrentKpCard(kp: KpRecord, timeZoneId: String) {
+private fun CurrentKpCard(kp: KpRecord, timeZoneId: String, hourlyRecords: List<KpRecord>) {
     val category = KpScale.category(kp.kp)
     val color = kpColorForCategory(category)
+    val displaySlots = (0 until 8).map { index -> hourlyRecords.getOrNull(index) }
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
@@ -279,6 +289,47 @@ private fun CurrentKpCard(kp: KpRecord, timeZoneId: String) {
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+            }
+            if (displaySlots.any { it != null }) {
+                Spacer(Modifier.height(12.dp))
+                Row(
+                    Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    displaySlots.forEach { record ->
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(24.dp)
+                                .clip(RoundedCornerShape(4.dp))
+                                .background(
+                                    if (record != null) kpColorForCategory(KpScale.category(record.kp)).copy(alpha = 0.8f)
+                                    else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+                                )
+                        ) {
+                            Text(
+                                text = record?.kp?.let { formatKp(it) } ?: "—",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = if (record != null) Color.White else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+                                modifier = Modifier.align(Alignment.Center)
+                            )
+                        }
+                    }
+                }
+                Row(
+                    Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    displaySlots.forEach { record ->
+                        Text(
+                            text = record?.formatTime(timeZoneId, "HH:mm") ?: "—",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                }
             }
         }
     }
