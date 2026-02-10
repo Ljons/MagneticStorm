@@ -8,6 +8,7 @@
     <color name="widget_highlight">#18FFFFFF</color>
     <color name="widget_highlight_end">#00000000</color>
     <color name="widget_label_color">#FF5C6578</color>
+    <color name="widget_slot_bg">#33535F70</color>
     <color name="widget_updated_color">#FF8A8F99</color>
     <string name="app_name">Магнітні бурі</string>
     <string name="back">Назад</string>

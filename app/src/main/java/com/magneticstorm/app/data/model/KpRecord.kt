@@ -20,7 +20,7 @@ data class KpRecord(
     val noaaScale: String?
 ) {
     /** Час у заданій таймзоні для відображення */
-    fun formatTime(timeZoneId: String, pattern: String = "dd MMM, HH:mm"): String {
+    fun formatTime(timeZoneId: String, pattern: String = "dd-MM-yyyy, HH:mm"): String {
         return try {
             val utc = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US).apply { this.timeZone = TimeZone.getTimeZone("UTC") }
             val date = utc.parse(timeTag.take(19)) ?: return timeTag
@@ -31,7 +31,7 @@ data class KpRecord(
         }
     }
 
-    fun dateOnly(timeZoneId: String): String = formatTime(timeZoneId, "dd MMM")
+    fun dateOnly(timeZoneId: String): String = formatTime(timeZoneId, "dd-MM-yyyy")
 
     /** Час запису в UTC у мілісекундах (для порівняння з поточним часом). */
     fun timeUtcMillis(): Long? = try {

@@ -6,6 +6,7 @@
     <color name="widget_highlight">#12FFFFFF</color>
     <color name="widget_highlight_end">#00000000</color>
     <color name="widget_label_color">#FFB8C4D6</color>
+    <color name="widget_slot_bg">#3343474E</color>
     <color name="widget_updated_color">#FF8D9199</color>
     <style name="Theme.MagneticStorm" parent="android:Theme.Material.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>

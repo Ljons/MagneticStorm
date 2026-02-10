@@ -36,8 +36,12 @@ class KpSyncWorker(
 
             val result = kpRepository.getForecast().getOrNull() ?: return Result.retry()
             val current = kpRepository.currentKpForNow(result) ?: return Result.success()
-
-            WidgetUpdateHelper.saveAndUpdateWidget(applicationContext, current.kp)
+            val location = prefs.getSavedLocationSync()
+            val todayStr = kpRepository.getTodayString(location.timeZoneId)
+            val byDay = kpRepository.groupByDay(result, location.timeZoneId, todayStr, daysBack = 4, daysForward = 3)
+            val todayRecords = byDay[todayStr].orEmpty()
+            val state = WidgetUpdateHelper.buildCardState(current, todayRecords, location.timeZoneId, location.displayName)
+            WidgetUpdateHelper.saveAndUpdateWidget(applicationContext, state)
 
             val notificationsEnabled = prefs.notificationEnabled.first()
             if (!notificationsEnabled) return Result.success()

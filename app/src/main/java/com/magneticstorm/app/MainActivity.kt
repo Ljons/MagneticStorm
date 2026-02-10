@@ -39,8 +39,13 @@ class MainActivity : ComponentActivity() {
             val notificationPermissionLauncher = rememberLauncherForActivityResult(
                 ActivityResultContracts.RequestPermission()
             ) { }
-            LaunchedEffect(uiState.currentKp) {
-                uiState.currentKp?.let { kp ->
+            LaunchedEffect(uiState.currentKp, uiState.todayForLocation, uiState.forecastByDay, uiState.location) {
+                val kp = uiState.currentKp
+                val todayRecords = uiState.todayForLocation?.let { uiState.forecastByDay[it] }.orEmpty()
+                if (kp != null && todayRecords.isNotEmpty()) {
+                    val state = WidgetUpdateHelper.buildCardState(kp, todayRecords, uiState.location.timeZoneId, uiState.location.displayName)
+                    WidgetUpdateHelper.saveAndUpdateWidget(app.applicationContext, state)
+                } else if (kp != null) {
                     WidgetUpdateHelper.saveAndUpdateWidget(app.applicationContext, kp.kp)
                 }
             }

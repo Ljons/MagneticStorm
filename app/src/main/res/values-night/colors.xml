@@ -8,4 +8,5 @@
     <color name="widget_accent">#FF7BA3FF</color>
     <color name="widget_label_color">#FFB8C4D6</color>
     <color name="widget_updated_color">#FF8D9199</color>
+    <color name="widget_slot_bg">#3343474E</color>
 </resources>

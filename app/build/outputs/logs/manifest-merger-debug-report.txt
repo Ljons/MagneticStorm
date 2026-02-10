@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:2:1-40:12
+ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:2:1-48:12
 MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/d5b1e6be3a394111f5a934c0831554d7/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:17:1-145:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] /Users/screenmeet/.gradle/caches/8.13/transforms/51003fc09f2322b704ea551ba9b38967/transformed/navigation-common-2.7.7/AndroidManifest.xml:17:1-22:12
@@ -86,8 +86,8 @@ ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:
 	android:name
 		ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:6:22-74
 application
-ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:8:5-39:19
-INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:8:5-39:19
+ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:8:5-47:19
+INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:8:5-47:19
 MERGED from [androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:28:5-143:19
 MERGED from [androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:28:5-143:19
 MERGED from [androidx.compose.ui:ui-test-manifest:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/835404f4d7a3793e36a31df5cada51ce/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:22:5-26:19
@@ -166,6 +166,18 @@ ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:
 		ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:37:17-56
 	android:name
 		ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:36:17-58
+receiver#com.magneticstorm.app.receiver.DeviceUnlockReceiver
+ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:40:9-46:20
+	android:exported
+		ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:41:13-58
+intent-filter#action:name:android.intent.action.USER_PRESENT
+ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:43:13-45:29
+action#android.intent.action.USER_PRESENT
+ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:44:17-77
+	android:name
+		ADDED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:44:25-74
 uses-sdk
 INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml

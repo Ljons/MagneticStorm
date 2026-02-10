@@ -2,6 +2,7 @@ package com.magneticstorm.app.ui.screen
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -131,16 +132,15 @@ fun HomeScreen(
                         contentPadding = PaddingValues(16.dp),
                         verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
-                        item {
-                            LocationCard(location = state.location, onClick = onOpenLocation)
-                        }
                         state.currentKp?.let { kp ->
                             item {
                                 val todayRecords = state.forecastByDay[state.todayForLocation] ?: emptyList()
                                 CurrentKpCard(
                                     kp = kp,
                                     timeZoneId = state.location.timeZoneId,
-                                    hourlyRecords = todayRecords
+                                    hourlyRecords = todayRecords,
+                                    location = state.location,
+                                    onLocationClick = onOpenLocation
                                 )
                             }
                         }
@@ -186,46 +186,45 @@ fun HomeScreen(
 }
 
 @Composable
-private fun LocationCard(location: SavedLocation, onClick: () -> Unit) {
-    Card(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+private fun LocationBlock(location: SavedLocation, onClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .clickable(onClick = onClick)
+            .padding(4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.End
     ) {
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Icon(
-                Icons.Default.LocationOn,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(28.dp)
+        Column(horizontalAlignment = Alignment.End) {
+            Text(
+                stringResource(R.string.your_location),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f)
             )
-            Spacer(Modifier.size(12.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    stringResource(R.string.your_location),
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
-                )
-                Text(
-                    location.displayName,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    color = MaterialTheme.colorScheme.onPrimaryContainer
-                )
-            }
+            Text(
+                location.displayName,
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.onSurface
+            )
         }
+        Spacer(Modifier.size(6.dp))
+        Icon(
+            Icons.Default.LocationOn,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.size(20.dp)
+        )
     }
 }
 
 @Composable
-private fun CurrentKpCard(kp: KpRecord, timeZoneId: String, hourlyRecords: List<KpRecord>) {
+private fun CurrentKpCard(
+    kp: KpRecord,
+    timeZoneId: String,
+    hourlyRecords: List<KpRecord>,
+    location: SavedLocation,
+    onLocationClick: () -> Unit
+) {
     val category = KpScale.category(kp.kp)
     val color = kpColorForCategory(category)
     val displaySlots = (0 until 8).map { index -> hourlyRecords.getOrNull(index) }
@@ -236,16 +235,29 @@ private fun CurrentKpCard(kp: KpRecord, timeZoneId: String, hourlyRecords: List<
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(Modifier.padding(20.dp)) {
-            Text(
-                stringResource(R.string.today_level),
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            Text(
-                kp.formatTime(timeZoneId, "dd MMM yyyy"),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.9f)
-            )
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.Top
+            ) {
+                Column {
+                    Text(
+                        stringResource(R.string.today_level),
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Text(
+                        kp.formatTime(timeZoneId, "dd-MM-yyyy"),
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.9f)
+                    )
+                }
+                LocationBlock(
+                    location = location,
+                    onClick = onLocationClick
+                )
+            }
             Spacer(Modifier.height(8.dp))
             Row(
                 Modifier.fillMaxWidth(),
@@ -365,7 +377,7 @@ private fun DayForecastCard(
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        dayKey,
+                        formatDateDdMmYyyy(dayKey),
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.onSurface
@@ -446,6 +458,12 @@ private fun DayForecastCard(
             }
         }
     }
+}
+
+/** Конвертує ключ дня yyyy-MM-dd у формат відображення dd-MM-yyyy */
+private fun formatDateDdMmYyyy(ymd: String): String {
+    val parts = ymd.split("-")
+    return if (parts.size == 3) "${parts[2]}-${parts[1]}-${parts[0]}" else ymd
 }
 
 @Composable
