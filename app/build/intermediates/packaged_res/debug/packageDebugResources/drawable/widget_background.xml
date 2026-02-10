@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Основа: градієнт фону -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="145"
+                android:startColor="@color/widget_bg_start"
+                android:endColor="@color/widget_bg_end"
+                android:type="linear" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+    <!-- М’яке світлове відблиск зверху для глибини -->
+    <item
+        android:top="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:height="60dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="@color/widget_highlight"
+                android:endColor="@color/widget_highlight_end"
+                android:type="linear" />
+            <corners
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp" />
+        </shape>
+    </item>
+    <!-- Акцентна смуга зліва -->
+    <item
+        android:left="0dp"
+        android:top="0dp"
+        android:bottom="0dp"
+        android:width="5dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/widget_accent" />
+            <corners
+                android:topLeftRadius="20dp"
+                android:bottomLeftRadius="20dp" />
+        </shape>
+    </item>
+</layer-list>
