@@ -112,4 +112,46 @@ class KpRepository {
             ?.first
             ?: records.minByOrNull { it.timeTag } // якщо всі в майбутньому — показуємо найраніший
     }
+
+    /**
+     * Середній Kp по днях поточного місяця в заданій таймзоні.
+     * Повертає список (день місяця 1..31, середній Kp), відсортований за днем.
+     */
+    fun getCurrentMonthDailyAverages(
+        records: List<KpRecord>,
+        timeZoneId: String
+    ): List<Pair<Int, Double>> {
+        val tz = TimeZone.getTimeZone(timeZoneId)
+        val out = SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).apply { timeZone = tz }
+        val utc = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", java.util.Locale.US).apply { timeZone = TimeZone.getTimeZone("UTC") }
+        val utcDateOnly = SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).apply { timeZone = TimeZone.getTimeZone("UTC") }
+        val nowCal = Calendar.getInstance(tz)
+        val currentYear = nowCal.get(Calendar.YEAR)
+        val currentMonth = nowCal.get(Calendar.MONTH)
+        val byDayStr = records.groupBy { record ->
+            try {
+                val date = utc.parse(record.timeTag.take(19))
+                if (date != null) out.format(date)
+                else utcDateOnly.parse(record.timeTag.take(10))?.let { out.format(it) } ?: record.timeTag.take(10)
+            } catch (_: Exception) {
+                utcDateOnly.parse(record.timeTag.take(10))?.let { out.format(it) } ?: record.timeTag.take(10)
+            }
+        }
+        return byDayStr
+            .filter { (key, _) ->
+                val parts = key.split("-")
+                if (parts.size != 3) return@filter false
+                val y = parts[0].toIntOrNull() ?: return@filter false
+                val m = parts[1].toIntOrNull() ?: return@filter false
+                y == currentYear && (m - 1) == currentMonth
+            }
+            .map { (key, dayRecords) ->
+                val dayOfMonth = key.split("-").getOrNull(2)?.toIntOrNull() ?: 0
+                val kpValues = dayRecords.map { it.kp }.filter { it > 0 }
+                val avg = if (kpValues.isEmpty()) dayRecords.map { it.kp }.average() else kpValues.average()
+                dayOfMonth to avg
+            }
+            .filter { it.first in 1..31 }
+            .sortedBy { it.first }
+    }
 }

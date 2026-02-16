@@ -64,10 +64,15 @@ import com.magneticstorm.app.ui.viewmodel.MainViewModel
 fun HomeScreen(
     viewModel: MainViewModel,
     onOpenLocation: () -> Unit,
-    onOpenSettings: () -> Unit
+    onOpenSettings: () -> Unit,
+    content: @Composable (PaddingValues) -> Unit = { padding ->
+        HomeScreenContent(
+            viewModel = viewModel,
+            onOpenLocation = onOpenLocation,
+            modifier = Modifier.padding(padding)
+        )
+    }
 ) {
-    val state by viewModel.uiState.collectAsState()
-
     Scaffold(
         topBar = {
             TopAppBar(
@@ -87,98 +92,105 @@ fun HomeScreen(
             )
         }
     ) { padding ->
-        Box(
-            Modifier
-                .fillMaxSize()
-                .padding(padding)
-        ) {
-            when {
-                state.isLoading && state.forecast.isEmpty() -> {
-                    Column(
-                        Modifier.fillMaxSize(),
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        CircularProgressIndicator()
-                        Spacer(Modifier.height(16.dp))
-                        Text(
-                            stringResource(R.string.loading),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
+        content(padding)
+    }
+}
+
+/** Контент головного екрану (список Kp). Використовується всередині свайпу з графіком. */
+@Composable
+fun HomeScreenContent(
+    viewModel: MainViewModel,
+    onOpenLocation: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val state by viewModel.uiState.collectAsState()
+    Box(modifier = modifier.fillMaxSize()) {
+        when {
+            state.isLoading && state.forecast.isEmpty() -> {
+                Column(
+                    Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    CircularProgressIndicator()
+                    Spacer(Modifier.height(16.dp))
+                    Text(
+                        stringResource(R.string.loading),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+            state.error != null && state.forecast.isEmpty() -> {
+                Column(
+                    Modifier
+                        .fillMaxSize()
+                        .padding(24.dp),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        state.error!!,
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = MaterialTheme.colorScheme.error
+                    )
+                    Spacer(Modifier.height(16.dp))
+                    IconButton(onClick = { viewModel.loadKpData() }) {
+                        Icon(Icons.Default.Refresh, contentDescription = stringResource(R.string.retry))
                     }
                 }
-                state.error != null && state.forecast.isEmpty() -> {
-                    Column(
+            }
+            else -> {
+                LazyColumn(
+                    contentPadding = PaddingValues(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    state.currentKp?.let { kp ->
+                        item {
+                            val todayRecords = state.forecastByDay[state.todayForLocation] ?: emptyList()
+                            CurrentKpCard(
+                                kp = kp,
+                                timeZoneId = state.location.timeZoneId,
+                                hourlyRecords = todayRecords,
+                                location = state.location,
+                                onLocationClick = onOpenLocation
+                            )
+                        }
+                    }
+                    if (state.forecastByDay.isNotEmpty()) {
+                        item {
+                            Text(
+                                stringResource(R.string.forecast_days),
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.SemiBold,
+                                color = MaterialTheme.colorScheme.onSurface,
+                                modifier = Modifier.padding(vertical = 8.dp)
+                            )
+                        }
+                        items(
+                            state.forecastByDay.entries.toList().let { entries ->
+                                val today = state.todayForLocation ?: ""
+                                val (future, todayAndPast) = entries.partition { it.key > today }
+                                future.sortedBy { it.key } + todayAndPast.sortedByDescending { it.key }
+                            },
+                            key = { it.key }
+                        ) { entry ->
+                            DayForecastCard(
+                                dayKey = entry.key,
+                                records = entry.value,
+                                timeZoneId = state.location.timeZoneId,
+                                isForecast = state.todayForLocation?.let { today -> entry.key > today } ?: false
+                            )
+                        }
+                    }
+                }
+                if (state.isLoading && state.forecast.isNotEmpty()) {
+                    CircularProgressIndicator(
                         Modifier
-                            .fillMaxSize()
-                            .padding(24.dp),
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        Text(
-                            state.error!!,
-                            style = MaterialTheme.typography.bodyLarge,
-                            color = MaterialTheme.colorScheme.error
-                        )
-                        Spacer(Modifier.height(16.dp))
-                        IconButton(onClick = { viewModel.loadKpData() }) {
-                            Icon(Icons.Default.Refresh, contentDescription = stringResource(R.string.retry))
-                        }
-                    }
-                }
-                else -> {
-                    LazyColumn(
-                        contentPadding = PaddingValues(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(12.dp)
-                    ) {
-                        state.currentKp?.let { kp ->
-                            item {
-                                val todayRecords = state.forecastByDay[state.todayForLocation] ?: emptyList()
-                                CurrentKpCard(
-                                    kp = kp,
-                                    timeZoneId = state.location.timeZoneId,
-                                    hourlyRecords = todayRecords,
-                                    location = state.location,
-                                    onLocationClick = onOpenLocation
-                                )
-                            }
-                        }
-                        if (state.forecastByDay.isNotEmpty()) {
-                            item {
-                                Text(
-                                    stringResource(R.string.forecast_days),
-                                    style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = FontWeight.SemiBold,
-                                    color = MaterialTheme.colorScheme.onSurface,
-                                    modifier = Modifier.padding(vertical = 8.dp)
-                                )
-                            }
-                            items(
-                                state.forecastByDay.entries.toList().let { entries ->
-                                    val today = state.todayForLocation ?: ""
-                                    val (future, todayAndPast) = entries.partition { it.key > today }
-                                    future.sortedBy { it.key } + todayAndPast.sortedByDescending { it.key }
-                                },
-                                key = { it.key }
-                            ) { entry ->
-                                DayForecastCard(
-                                    dayKey = entry.key,
-                                    records = entry.value,
-                                    timeZoneId = state.location.timeZoneId,
-                                    isForecast = state.todayForLocation?.let { today -> entry.key > today } ?: false
-                                )
-                            }
-                        }
-                    }
-                    if (state.isLoading && state.forecast.isNotEmpty()) {
-                        CircularProgressIndicator(
-                            Modifier
-                                .align(Alignment.TopEnd)
-                                .padding(16.dp)
-                                .size(24.dp)
-                        )
-                    }
+                            .align(Alignment.TopEnd)
+                            .padding(16.dp)
+                            .size(24.dp)
+                    )
                 }
             }
         }

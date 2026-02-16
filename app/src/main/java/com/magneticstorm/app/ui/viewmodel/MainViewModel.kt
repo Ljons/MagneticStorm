@@ -18,6 +18,8 @@ data class MainUiState(
     val location: SavedLocation = SavedLocation.DEFAULT,
     val forecast: List<KpRecord> = emptyList(),
     val forecastByDay: Map<String, List<KpRecord>> = emptyMap(),
+    /** Дні поточного місяця та середній Kp за день для графіка (день to середнє). */
+    val monthChartData: List<Pair<Int, Double>> = emptyList(),
     val currentKp: KpRecord? = null,
     val todayForLocation: String? = null,
     val isLoading: Boolean = false,
@@ -66,7 +68,9 @@ class MainViewModel(
                         location = loc,
                         todayForLocation = todayStr,
                         forecastByDay = if (state.forecast.isEmpty()) emptyMap()
-                        else kpRepository.groupByDay(state.forecast, tz, todayStr, daysBack = 4, daysForward = 3)
+                        else kpRepository.groupByDay(state.forecast, tz, todayStr, daysBack = 4, daysForward = 3),
+                        monthChartData = if (state.forecast.isEmpty()) emptyList()
+                        else kpRepository.getCurrentMonthDailyAverages(state.forecast, tz)
                     )
                 }
             }
@@ -97,17 +101,24 @@ class MainViewModel(
     fun loadKpData() {
         viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true, error = null) }
-            val result = kpRepository.getForecast()
-            result.fold(
+            val forecastResult = kpRepository.getForecast()
+            val currentResult = kpRepository.getCurrent()
+            forecastResult.fold(
                 onSuccess = { list ->
                     val location = _uiState.value.location
                     val todayStr = kpRepository.getTodayString(location.timeZoneId)
+                    val forecastTimeTags = list.map { it.timeTag.take(19) }.toSet()
+                    val currentList = currentResult.getOrNull().orEmpty()
+                    val currentOnly = currentList.filter { it.timeTag.take(19) !in forecastTimeTags }
+                    val listForMonth = list + currentOnly
                     val byDay = kpRepository.groupByDay(list, location.timeZoneId, todayStr, daysBack = 4, daysForward = 3)
                     val current = kpRepository.currentKpForNow(list)
+                    val monthData = kpRepository.getCurrentMonthDailyAverages(listForMonth, location.timeZoneId)
                     _uiState.update {
                         it.copy(
                             forecast = list,
                             forecastByDay = byDay,
+                            monthChartData = monthData,
                             currentKp = current,
                             todayForLocation = todayStr,
                             isLoading = false,
@@ -159,7 +170,8 @@ class MainViewModel(
                     it.copy(
                         location = location,
                         todayForLocation = todayStr,
-                        forecastByDay = kpRepository.groupByDay(forecast, location.timeZoneId, todayStr, daysBack = 4, daysForward = 3)
+                        forecastByDay = kpRepository.groupByDay(forecast, location.timeZoneId, todayStr, daysBack = 4, daysForward = 3),
+                        monthChartData = kpRepository.getCurrentMonthDailyAverages(forecast, location.timeZoneId)
                     )
                 }
             }

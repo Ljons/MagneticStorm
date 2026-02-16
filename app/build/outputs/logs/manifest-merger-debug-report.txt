@@ -6,6 +6,7 @@ INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.x
 INJECTED from /Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:2:1-48:12
 MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/d5b1e6be3a394111f5a934c0831554d7/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:17:1-145:12
+MERGED from [androidx.compose.material3:material3-android:1.2.0] /Users/screenmeet/.gradle/caches/8.13/transforms/6443db5e8220c0e901fec9792a7de6f6/transformed/material3-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] /Users/screenmeet/.gradle/caches/8.13/transforms/51003fc09f2322b704ea551ba9b38967/transformed/navigation-common-2.7.7/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.7] /Users/screenmeet/.gradle/caches/8.13/transforms/9df45503acc9ab17cba34d9ff338d17b/transformed/navigation-runtime-2.7.7/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] /Users/screenmeet/.gradle/caches/8.13/transforms/9b7cdd0f658ba3ae05398a23a35e92d3/transformed/navigation-common-ktx-2.7.7/AndroidManifest.xml:2:1-7:12
@@ -13,12 +14,10 @@ MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] /Users/screenmeet
 MERGED from [androidx.navigation:navigation-compose:2.7.7] /Users/screenmeet/.gradle/caches/8.13/transforms/dfca53a8ae7645c7da36da0c4c487178/transformed/navigation-compose-2.7.7/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.activity:activity:1.8.2] /Users/screenmeet/.gradle/caches/8.13/transforms/70baf4379090ad1fa9d9f281fe35713c/transformed/activity-1.8.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/screenmeet/.gradle/caches/8.13/transforms/25dc51a8c034d9c7b21c1b0095768707/transformed/activity-ktx-1.8.2/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material3:material3-android:1.2.0] /Users/screenmeet/.gradle/caches/8.13/transforms/6443db5e8220c0e901fec9792a7de6f6/transformed/material3-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.material:material-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/50d64c8540afd7571f4b2e8514c471fe/transformed/material-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material:material-icons-core-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/a9cd3010b3c6df8f3bea29c036483469/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material:material-icons-extended-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/7c9d9084e61c7399d1d6fbb9e28890d6/transformed/material-icons-extended-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material:material-ripple-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/bbf776690056520ec7f063586d793805/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.foundation:foundation-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/00823253bc14114ab578423ad5a640ab/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/53f3d1e24efa999ade677f4edc7d969f/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.animation:animation-core-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/fba2d8aef76e342a5339bf62dadc7aa5/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.animation:animation-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/05df92a5f4aed135956b3ecb2a186cd3/transformed/animation-release/AndroidManifest.xml:2:1-7:12
@@ -48,6 +47,7 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/screenmeet/.grad
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/screenmeet/.gradle/caches/8.13/transforms/a4e2c58c45b9e6ebb7e4557412c458d7/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose:2.7.0] /Users/screenmeet/.gradle/caches/8.13/transforms/1dc1949b66bb03764e0436ed1483f829/transformed/lifecycle-runtime-compose-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/985b6416d967ed2d496d785ea9f2002e/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/00823253bc14114ab578423ad5a640ab/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.autofill:autofill:1.0.0] /Users/screenmeet/.gradle/caches/8.13/transforms/64147f8ad793445928822170b749d5e3/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.12.0] /Users/screenmeet/.gradle/caches/8.13/transforms/9f15916e77145aeb64057184f98ba8d7/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/screenmeet/.gradle/caches/8.13/transforms/c31541589a650f879b564454fb909550/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
@@ -186,6 +186,8 @@ MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/screenmeet/.gradle/cac
 MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/d5b1e6be3a394111f5a934c0831554d7/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.0] /Users/screenmeet/.gradle/caches/8.13/transforms/6443db5e8220c0e901fec9792a7de6f6/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.0] /Users/screenmeet/.gradle/caches/8.13/transforms/6443db5e8220c0e901fec9792a7de6f6/transformed/material3-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.7.7] /Users/screenmeet/.gradle/caches/8.13/transforms/51003fc09f2322b704ea551ba9b38967/transformed/navigation-common-2.7.7/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.7.7] /Users/screenmeet/.gradle/caches/8.13/transforms/51003fc09f2322b704ea551ba9b38967/transformed/navigation-common-2.7.7/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-runtime:2.7.7] /Users/screenmeet/.gradle/caches/8.13/transforms/9df45503acc9ab17cba34d9ff338d17b/transformed/navigation-runtime-2.7.7/AndroidManifest.xml:20:5-44
@@ -200,8 +202,6 @@ MERGED from [androidx.activity:activity:1.8.2] /Users/screenmeet/.gradle/caches/
 MERGED from [androidx.activity:activity:1.8.2] /Users/screenmeet/.gradle/caches/8.13/transforms/70baf4379090ad1fa9d9f281fe35713c/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/screenmeet/.gradle/caches/8.13/transforms/25dc51a8c034d9c7b21c1b0095768707/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
 MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/screenmeet/.gradle/caches/8.13/transforms/25dc51a8c034d9c7b21c1b0095768707/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material3:material3-android:1.2.0] /Users/screenmeet/.gradle/caches/8.13/transforms/6443db5e8220c0e901fec9792a7de6f6/transformed/material3-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material3:material3-android:1.2.0] /Users/screenmeet/.gradle/caches/8.13/transforms/6443db5e8220c0e901fec9792a7de6f6/transformed/material3-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.material:material-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/50d64c8540afd7571f4b2e8514c471fe/transformed/material-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/50d64c8540afd7571f4b2e8514c471fe/transformed/material-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-icons-core-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/a9cd3010b3c6df8f3bea29c036483469/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
@@ -210,8 +210,6 @@ MERGED from [androidx.compose.material:material-icons-extended-android:1.6.1] /U
 MERGED from [androidx.compose.material:material-icons-extended-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/7c9d9084e61c7399d1d6fbb9e28890d6/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-ripple-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/bbf776690056520ec7f063586d793805/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-ripple-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/bbf776690056520ec7f063586d793805/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/00823253bc14114ab578423ad5a640ab/transformed/foundation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/00823253bc14114ab578423ad5a640ab/transformed/foundation-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/53f3d1e24efa999ade677f4edc7d969f/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/53f3d1e24efa999ade677f4edc7d969f/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.animation:animation-core-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/fba2d8aef76e342a5339bf62dadc7aa5/transformed/animation-core-release/AndroidManifest.xml:5:5-44
@@ -270,6 +268,8 @@ MERGED from [androidx.lifecycle:lifecycle-runtime-compose:2.7.0] /Users/screenme
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose:2.7.0] /Users/screenmeet/.gradle/caches/8.13/transforms/1dc1949b66bb03764e0436ed1483f829/transformed/lifecycle-runtime-compose-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/985b6416d967ed2d496d785ea9f2002e/transformed/ui-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/985b6416d967ed2d496d785ea9f2002e/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/00823253bc14114ab578423ad5a640ab/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/00823253bc14114ab578423ad5a640ab/transformed/foundation-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.autofill:autofill:1.0.0] /Users/screenmeet/.gradle/caches/8.13/transforms/64147f8ad793445928822170b749d5e3/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.autofill:autofill:1.0.0] /Users/screenmeet/.gradle/caches/8.13/transforms/64147f8ad793445928822170b749d5e3/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.12.0] /Users/screenmeet/.gradle/caches/8.13/transforms/9f15916e77145aeb64057184f98ba8d7/transformed/core-1.12.0/AndroidManifest.xml:20:5-44

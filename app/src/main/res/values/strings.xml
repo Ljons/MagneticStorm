@@ -35,4 +35,6 @@
     <string name="widget_label">Магнітні бурі</string>
     <string name="widget_updated_format">Оновлено %1$s</string>
     <string name="widget_description">Поточний індекс Kp магнітних бурь</string>
+    <string name="chart_screen_title">Kp за місяць</string>
+    <string name="chart_no_data">Немає даних за поточний місяць</string>
 </resources>

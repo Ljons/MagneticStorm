@@ -9,18 +9,27 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import com.magneticstorm.app.widget.WidgetUpdateHelper
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.magneticstorm.app.ui.screen.ChartScreen
 import com.magneticstorm.app.ui.screen.HomeScreen
+import com.magneticstorm.app.ui.screen.HomeScreenContent
 import com.magneticstorm.app.ui.screen.LocationPickerScreen
 import com.magneticstorm.app.ui.screen.SettingsScreen
 import com.magneticstorm.app.ui.theme.MagneticStormTheme
+import com.magneticstorm.app.ui.viewmodel.MainViewModel
 
 class MainActivity : ComponentActivity() {
 
@@ -64,6 +73,32 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun HomeScreenWithPager(
+    viewModel: MainViewModel,
+    onOpenLocation: () -> Unit,
+    onOpenSettings: () -> Unit
+) {
+    val pagerState = rememberPagerState(pageCount = { 2 })
+    HomeScreen(
+        viewModel = viewModel,
+        onOpenLocation = onOpenLocation,
+        onOpenSettings = onOpenSettings,
+        content = { contentPadding ->
+            HorizontalPager(
+                state = pagerState,
+                modifier = Modifier.padding(contentPadding)
+            ) { page ->
+                when (page) {
+                    0 -> HomeScreenContent(viewModel = viewModel, onOpenLocation = onOpenLocation)
+                    1 -> ChartScreen(viewModel = viewModel)
+                }
+            }
+        }
+    )
+}
+
 @Composable
 private fun AppNavHost(
     viewModel: com.magneticstorm.app.ui.viewmodel.MainViewModel,
@@ -76,7 +111,7 @@ private fun AppNavHost(
         startDestination = "home"
     ) {
         composable("home") {
-            HomeScreen(
+            HomeScreenWithPager(
                 viewModel = viewModel,
                 onOpenLocation = { navController.navigate("location") },
                 onOpenSettings = { navController.navigate("settings") }

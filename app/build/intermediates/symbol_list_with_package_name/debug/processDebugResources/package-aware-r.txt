@@ -246,6 +246,8 @@ string call_notification_hang_up_action
 string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
+string chart_no_data
+string chart_screen_title
 string choose_location
 string city_country_hint
 string close_drawer

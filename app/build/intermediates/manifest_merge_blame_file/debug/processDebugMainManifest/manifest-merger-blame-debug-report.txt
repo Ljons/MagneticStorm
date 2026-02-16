@@ -56,337 +56,338 @@
 32-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:13:9-54
 33        android:supportsRtl="true"
 33-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:14:9-35
-34        android:theme="@style/Theme.MagneticStorm" >
-34-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:15:9-51
-35        <activity
-35-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:18:9-26:20
-36            android:name="com.magneticstorm.app.MainActivity"
-36-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:19:13-41
-37            android:exported="true"
-37-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:20:13-36
-38            android:theme="@style/Theme.MagneticStorm" >
-38-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:21:13-55
-39            <intent-filter>
-39-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:22:13-25:29
-40                <action android:name="android.intent.action.MAIN" />
-40-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:23:17-69
-40-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:23:25-66
-41
-42                <category android:name="android.intent.category.LAUNCHER" />
-42-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:24:17-77
-42-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:24:27-74
-43            </intent-filter>
-44        </activity>
-45
-46        <receiver
-46-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:28:9-38:20
-47            android:name="com.magneticstorm.app.widget.KpWidgetProvider"
-47-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:29:13-52
-48            android:exported="true"
-48-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:30:13-36
-49            android:label="@string/widget_label" >
-49-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:31:13-49
-50            <intent-filter>
-50-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:32:13-34:29
-51                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-51-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:33:17-84
-51-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:33:25-81
-52            </intent-filter>
-53
-54            <meta-data
-54-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:35:13-37:59
-55                android:name="android.appwidget.provider"
-55-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:36:17-58
-56                android:resource="@xml/app_widget_info" />
-56-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:37:17-56
-57        </receiver>
-58        <receiver
-58-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:40:9-46:20
-59            android:name="com.magneticstorm.app.receiver.DeviceUnlockReceiver"
-59-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:41:13-58
-60            android:exported="false" >
-60-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:42:13-37
-61            <intent-filter>
-61-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:43:13-45:29
-62                <action android:name="android.intent.action.USER_PRESENT" />
-62-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:44:17-77
-62-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:44:25-74
-63            </intent-filter>
-64        </receiver>
-65
-66        <provider
-66-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:29:9-37:20
-67            android:name="androidx.startup.InitializationProvider"
-67-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:30:13-67
-68            android:authorities="com.magneticstorm.app.debug.androidx-startup"
-68-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:31:13-68
-69            android:exported="false" >
-69-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:32:13-37
-70            <meta-data
-70-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:34:13-36:52
-71                android:name="androidx.work.WorkManagerInitializer"
-71-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:35:17-68
-72                android:value="androidx.startup" />
-72-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:36:17-49
-73            <meta-data
-73-->[androidx.emoji2:emoji2:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/66485015d0c63cc0054e2bff56d56de0/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-74                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-74-->[androidx.emoji2:emoji2:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/66485015d0c63cc0054e2bff56d56de0/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-75                android:value="androidx.startup" />
-75-->[androidx.emoji2:emoji2:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/66485015d0c63cc0054e2bff56d56de0/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-76            <meta-data
-76-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/screenmeet/.gradle/caches/8.13/transforms/a5563595919fd847a3e1bf8b084406f8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
-77                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-77-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/screenmeet/.gradle/caches/8.13/transforms/a5563595919fd847a3e1bf8b084406f8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
-78                android:value="androidx.startup" />
-78-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/screenmeet/.gradle/caches/8.13/transforms/a5563595919fd847a3e1bf8b084406f8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
-79            <meta-data
-79-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-80                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-80-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-81                android:value="androidx.startup" />
-81-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-82        </provider>
-83
-84        <service
-84-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:39:9-45:35
-85            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
-85-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:40:13-88
-86            android:directBootAware="false"
-86-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:41:13-44
-87            android:enabled="@bool/enable_system_alarm_service_default"
-87-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:42:13-72
-88            android:exported="false" />
-88-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:43:13-37
-89        <service
-89-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:46:9-52:35
-90            android:name="androidx.work.impl.background.systemjob.SystemJobService"
-90-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:47:13-84
-91            android:directBootAware="false"
-91-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:48:13-44
-92            android:enabled="@bool/enable_system_job_service_default"
-92-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:49:13-70
-93            android:exported="true"
-93-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:50:13-36
-94            android:permission="android.permission.BIND_JOB_SERVICE" />
-94-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:51:13-69
-95        <service
-95-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:53:9-59:35
-96            android:name="androidx.work.impl.foreground.SystemForegroundService"
-96-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:54:13-81
-97            android:directBootAware="false"
-97-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:55:13-44
-98            android:enabled="@bool/enable_system_foreground_service_default"
-98-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:56:13-77
-99            android:exported="false" />
-99-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:57:13-37
-100
-101        <receiver
-101-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:61:9-66:35
-102            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
-102-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:62:13-88
-103            android:directBootAware="false"
-103-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:63:13-44
-104            android:enabled="true"
-104-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:64:13-35
-105            android:exported="false" />
-105-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:65:13-37
-106        <receiver
-106-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:67:9-77:20
-107            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
-107-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:68:13-106
-108            android:directBootAware="false"
-108-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:69:13-44
-109            android:enabled="false"
-109-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:70:13-36
-110            android:exported="false" >
-110-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:71:13-37
-111            <intent-filter>
-111-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:73:13-76:29
-112                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-112-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:17-87
-112-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:25-84
-113                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-113-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:17-90
-113-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:25-87
-114            </intent-filter>
-115        </receiver>
-116        <receiver
-116-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:78:9-88:20
-117            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
-117-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:79:13-104
-118            android:directBootAware="false"
-118-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:80:13-44
-119            android:enabled="false"
-119-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:81:13-36
-120            android:exported="false" >
-120-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:82:13-37
-121            <intent-filter>
-121-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:84:13-87:29
-122                <action android:name="android.intent.action.BATTERY_OKAY" />
-122-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:17-77
-122-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:25-74
-123                <action android:name="android.intent.action.BATTERY_LOW" />
-123-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:17-76
-123-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:25-73
-124            </intent-filter>
-125        </receiver>
-126        <receiver
-126-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:89:9-99:20
-127            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
-127-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:90:13-104
-128            android:directBootAware="false"
-128-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:91:13-44
-129            android:enabled="false"
-129-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:92:13-36
-130            android:exported="false" >
-130-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:93:13-37
-131            <intent-filter>
-131-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:95:13-98:29
-132                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
-132-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:17-83
-132-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:25-80
-133                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
-133-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:17-82
-133-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:25-79
-134            </intent-filter>
-135        </receiver>
-136        <receiver
-136-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:100:9-109:20
-137            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
-137-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:101:13-103
-138            android:directBootAware="false"
-138-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:102:13-44
-139            android:enabled="false"
-139-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:103:13-36
-140            android:exported="false" >
-140-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:104:13-37
-141            <intent-filter>
-141-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:106:13-108:29
-142                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-142-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:17-79
-142-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:25-76
-143            </intent-filter>
-144        </receiver>
-145        <receiver
-145-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:110:9-121:20
-146            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-146-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:111:13-88
-147            android:directBootAware="false"
-147-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:112:13-44
-148            android:enabled="false"
-148-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:113:13-36
-149            android:exported="false" >
-149-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:114:13-37
-150            <intent-filter>
-150-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:116:13-120:29
-151                <action android:name="android.intent.action.BOOT_COMPLETED" />
-151-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:17-79
-151-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:25-76
-152                <action android:name="android.intent.action.TIME_SET" />
-152-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:17-73
-152-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:25-70
-153                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-153-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:17-81
-153-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:25-78
-154            </intent-filter>
-155        </receiver>
-156        <receiver
-156-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:122:9-131:20
-157            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
-157-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:123:13-99
-158            android:directBootAware="false"
-158-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:124:13-44
-159            android:enabled="@bool/enable_system_alarm_service_default"
-159-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:125:13-72
-160            android:exported="false" >
-160-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:126:13-37
-161            <intent-filter>
-161-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:128:13-130:29
-162                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
-162-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:17-98
-162-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:25-95
-163            </intent-filter>
-164        </receiver>
-165        <receiver
-165-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:132:9-142:20
-166            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
-166-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:133:13-78
-167            android:directBootAware="false"
-167-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:134:13-44
-168            android:enabled="true"
-168-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:135:13-35
-169            android:exported="true"
-169-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:136:13-36
-170            android:permission="android.permission.DUMP" >
-170-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:137:13-57
-171            <intent-filter>
-171-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:139:13-141:29
-172                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
-172-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:17-88
-172-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:25-85
-173            </intent-filter>
-174        </receiver>
-175
-176        <activity
-176-->[androidx.compose.ui:ui-test-manifest:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/835404f4d7a3793e36a31df5cada51ce/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:23:9-25:39
-177            android:name="androidx.activity.ComponentActivity"
-177-->[androidx.compose.ui:ui-test-manifest:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/835404f4d7a3793e36a31df5cada51ce/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:24:13-63
-178            android:exported="true" />
-178-->[androidx.compose.ui:ui-test-manifest:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/835404f4d7a3793e36a31df5cada51ce/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:25:13-36
-179        <activity
-179-->[androidx.compose.ui:ui-tooling-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/ff6b7849af02cd8a0aaed1173c421f1b/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
-180            android:name="androidx.compose.ui.tooling.PreviewActivity"
-180-->[androidx.compose.ui:ui-tooling-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/ff6b7849af02cd8a0aaed1173c421f1b/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
-181            android:exported="true" />
-181-->[androidx.compose.ui:ui-tooling-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/ff6b7849af02cd8a0aaed1173c421f1b/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
-182
-183        <service
-183-->[androidx.room:room-runtime:2.5.0] /Users/screenmeet/.gradle/caches/8.13/transforms/694cecdf421413852c7d4f48b674920d/transformed/room-runtime-2.5.0/AndroidManifest.xml:24:9-28:63
-184            android:name="androidx.room.MultiInstanceInvalidationService"
-184-->[androidx.room:room-runtime:2.5.0] /Users/screenmeet/.gradle/caches/8.13/transforms/694cecdf421413852c7d4f48b674920d/transformed/room-runtime-2.5.0/AndroidManifest.xml:25:13-74
-185            android:directBootAware="true"
-185-->[androidx.room:room-runtime:2.5.0] /Users/screenmeet/.gradle/caches/8.13/transforms/694cecdf421413852c7d4f48b674920d/transformed/room-runtime-2.5.0/AndroidManifest.xml:26:13-43
-186            android:exported="false" />
-186-->[androidx.room:room-runtime:2.5.0] /Users/screenmeet/.gradle/caches/8.13/transforms/694cecdf421413852c7d4f48b674920d/transformed/room-runtime-2.5.0/AndroidManifest.xml:27:13-37
-187
-188        <receiver
-188-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-189            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-189-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-190            android:directBootAware="false"
-190-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-191            android:enabled="true"
-191-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-192            android:exported="true"
-192-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-193            android:permission="android.permission.DUMP" >
-193-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-194            <intent-filter>
-194-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-195                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-195-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-195-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-196            </intent-filter>
-197            <intent-filter>
-197-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-198                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-198-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-198-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-199            </intent-filter>
-200            <intent-filter>
-200-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-201                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-201-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-201-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-202            </intent-filter>
-203            <intent-filter>
-203-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-204                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-204-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-204-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-205            </intent-filter>
-206        </receiver>
-207    </application>
-208
-209</manifest>
+34        android:testOnly="true"
+35        android:theme="@style/Theme.MagneticStorm" >
+35-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:15:9-51
+36        <activity
+36-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:18:9-26:20
+37            android:name="com.magneticstorm.app.MainActivity"
+37-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:19:13-41
+38            android:exported="true"
+38-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:20:13-36
+39            android:theme="@style/Theme.MagneticStorm" >
+39-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:21:13-55
+40            <intent-filter>
+40-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:22:13-25:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:23:17-69
+41-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:23:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:24:17-77
+43-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:24:27-74
+44            </intent-filter>
+45        </activity>
+46
+47        <receiver
+47-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:28:9-38:20
+48            android:name="com.magneticstorm.app.widget.KpWidgetProvider"
+48-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:29:13-52
+49            android:exported="true"
+49-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:30:13-36
+50            android:label="@string/widget_label" >
+50-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:31:13-49
+51            <intent-filter>
+51-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:32:13-34:29
+52                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+52-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:33:17-84
+52-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:33:25-81
+53            </intent-filter>
+54
+55            <meta-data
+55-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:35:13-37:59
+56                android:name="android.appwidget.provider"
+56-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:36:17-58
+57                android:resource="@xml/app_widget_info" />
+57-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:37:17-56
+58        </receiver>
+59        <receiver
+59-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:40:9-46:20
+60            android:name="com.magneticstorm.app.receiver.DeviceUnlockReceiver"
+60-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:41:13-58
+61            android:exported="false" >
+61-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:42:13-37
+62            <intent-filter>
+62-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:43:13-45:29
+63                <action android:name="android.intent.action.USER_PRESENT" />
+63-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:44:17-77
+63-->/Users/screenmeet/git/MagneticStorm/app/src/main/AndroidManifest.xml:44:25-74
+64            </intent-filter>
+65        </receiver>
+66
+67        <provider
+67-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:29:9-37:20
+68            android:name="androidx.startup.InitializationProvider"
+68-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:30:13-67
+69            android:authorities="com.magneticstorm.app.debug.androidx-startup"
+69-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:31:13-68
+70            android:exported="false" >
+70-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:32:13-37
+71            <meta-data
+71-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:34:13-36:52
+72                android:name="androidx.work.WorkManagerInitializer"
+72-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:35:17-68
+73                android:value="androidx.startup" />
+73-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:36:17-49
+74            <meta-data
+74-->[androidx.emoji2:emoji2:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/66485015d0c63cc0054e2bff56d56de0/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+75-->[androidx.emoji2:emoji2:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/66485015d0c63cc0054e2bff56d56de0/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+76                android:value="androidx.startup" />
+76-->[androidx.emoji2:emoji2:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/66485015d0c63cc0054e2bff56d56de0/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+77            <meta-data
+77-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/screenmeet/.gradle/caches/8.13/transforms/a5563595919fd847a3e1bf8b084406f8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+78-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/screenmeet/.gradle/caches/8.13/transforms/a5563595919fd847a3e1bf8b084406f8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+79                android:value="androidx.startup" />
+79-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/screenmeet/.gradle/caches/8.13/transforms/a5563595919fd847a3e1bf8b084406f8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+80            <meta-data
+80-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+82                android:value="androidx.startup" />
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+83        </provider>
+84
+85        <service
+85-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:39:9-45:35
+86            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+86-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:40:13-88
+87            android:directBootAware="false"
+87-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:41:13-44
+88            android:enabled="@bool/enable_system_alarm_service_default"
+88-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:42:13-72
+89            android:exported="false" />
+89-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:43:13-37
+90        <service
+90-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:46:9-52:35
+91            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+91-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:47:13-84
+92            android:directBootAware="false"
+92-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:48:13-44
+93            android:enabled="@bool/enable_system_job_service_default"
+93-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:49:13-70
+94            android:exported="true"
+94-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:50:13-36
+95            android:permission="android.permission.BIND_JOB_SERVICE" />
+95-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:51:13-69
+96        <service
+96-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:53:9-59:35
+97            android:name="androidx.work.impl.foreground.SystemForegroundService"
+97-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:54:13-81
+98            android:directBootAware="false"
+98-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:55:13-44
+99            android:enabled="@bool/enable_system_foreground_service_default"
+99-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:56:13-77
+100            android:exported="false" />
+100-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:57:13-37
+101
+102        <receiver
+102-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:61:9-66:35
+103            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+103-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:62:13-88
+104            android:directBootAware="false"
+104-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:63:13-44
+105            android:enabled="true"
+105-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:64:13-35
+106            android:exported="false" />
+106-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:65:13-37
+107        <receiver
+107-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:67:9-77:20
+108            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+108-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:68:13-106
+109            android:directBootAware="false"
+109-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:69:13-44
+110            android:enabled="false"
+110-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:70:13-36
+111            android:exported="false" >
+111-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:71:13-37
+112            <intent-filter>
+112-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:73:13-76:29
+113                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+113-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:17-87
+113-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:25-84
+114                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+114-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:17-90
+114-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:25-87
+115            </intent-filter>
+116        </receiver>
+117        <receiver
+117-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:78:9-88:20
+118            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+118-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:79:13-104
+119            android:directBootAware="false"
+119-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:80:13-44
+120            android:enabled="false"
+120-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:81:13-36
+121            android:exported="false" >
+121-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:82:13-37
+122            <intent-filter>
+122-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:84:13-87:29
+123                <action android:name="android.intent.action.BATTERY_OKAY" />
+123-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:17-77
+123-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:25-74
+124                <action android:name="android.intent.action.BATTERY_LOW" />
+124-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:17-76
+124-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:25-73
+125            </intent-filter>
+126        </receiver>
+127        <receiver
+127-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:89:9-99:20
+128            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+128-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:90:13-104
+129            android:directBootAware="false"
+129-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:91:13-44
+130            android:enabled="false"
+130-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:92:13-36
+131            android:exported="false" >
+131-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:93:13-37
+132            <intent-filter>
+132-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:95:13-98:29
+133                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+133-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:17-83
+133-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:25-80
+134                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+134-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:17-82
+134-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:25-79
+135            </intent-filter>
+136        </receiver>
+137        <receiver
+137-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:100:9-109:20
+138            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+138-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:101:13-103
+139            android:directBootAware="false"
+139-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:102:13-44
+140            android:enabled="false"
+140-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:103:13-36
+141            android:exported="false" >
+141-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:104:13-37
+142            <intent-filter>
+142-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:106:13-108:29
+143                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+143-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:17-79
+143-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:25-76
+144            </intent-filter>
+145        </receiver>
+146        <receiver
+146-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:110:9-121:20
+147            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+147-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:111:13-88
+148            android:directBootAware="false"
+148-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:112:13-44
+149            android:enabled="false"
+149-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:113:13-36
+150            android:exported="false" >
+150-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:114:13-37
+151            <intent-filter>
+151-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:116:13-120:29
+152                <action android:name="android.intent.action.BOOT_COMPLETED" />
+152-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:17-79
+152-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:25-76
+153                <action android:name="android.intent.action.TIME_SET" />
+153-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:17-73
+153-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:25-70
+154                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+154-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:17-81
+154-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:25-78
+155            </intent-filter>
+156        </receiver>
+157        <receiver
+157-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:122:9-131:20
+158            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+158-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:123:13-99
+159            android:directBootAware="false"
+159-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:124:13-44
+160            android:enabled="@bool/enable_system_alarm_service_default"
+160-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:125:13-72
+161            android:exported="false" >
+161-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:126:13-37
+162            <intent-filter>
+162-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:128:13-130:29
+163                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+163-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:17-98
+163-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:25-95
+164            </intent-filter>
+165        </receiver>
+166        <receiver
+166-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:132:9-142:20
+167            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+167-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:133:13-78
+168            android:directBootAware="false"
+168-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:134:13-44
+169            android:enabled="true"
+169-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:135:13-35
+170            android:exported="true"
+170-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:136:13-36
+171            android:permission="android.permission.DUMP" >
+171-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:137:13-57
+172            <intent-filter>
+172-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:139:13-141:29
+173                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+173-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:17-88
+173-->[androidx.work:work-runtime:2.9.0] /Users/screenmeet/.gradle/caches/8.13/transforms/bf876dc4b1ef681902a18348c4b9bb9a/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:25-85
+174            </intent-filter>
+175        </receiver>
+176
+177        <activity
+177-->[androidx.compose.ui:ui-test-manifest:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/835404f4d7a3793e36a31df5cada51ce/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:23:9-25:39
+178            android:name="androidx.activity.ComponentActivity"
+178-->[androidx.compose.ui:ui-test-manifest:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/835404f4d7a3793e36a31df5cada51ce/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:24:13-63
+179            android:exported="true" />
+179-->[androidx.compose.ui:ui-test-manifest:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/835404f4d7a3793e36a31df5cada51ce/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:25:13-36
+180        <activity
+180-->[androidx.compose.ui:ui-tooling-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/ff6b7849af02cd8a0aaed1173c421f1b/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+181            android:name="androidx.compose.ui.tooling.PreviewActivity"
+181-->[androidx.compose.ui:ui-tooling-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/ff6b7849af02cd8a0aaed1173c421f1b/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+182            android:exported="true" />
+182-->[androidx.compose.ui:ui-tooling-android:1.6.1] /Users/screenmeet/.gradle/caches/8.13/transforms/ff6b7849af02cd8a0aaed1173c421f1b/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+183
+184        <service
+184-->[androidx.room:room-runtime:2.5.0] /Users/screenmeet/.gradle/caches/8.13/transforms/694cecdf421413852c7d4f48b674920d/transformed/room-runtime-2.5.0/AndroidManifest.xml:24:9-28:63
+185            android:name="androidx.room.MultiInstanceInvalidationService"
+185-->[androidx.room:room-runtime:2.5.0] /Users/screenmeet/.gradle/caches/8.13/transforms/694cecdf421413852c7d4f48b674920d/transformed/room-runtime-2.5.0/AndroidManifest.xml:25:13-74
+186            android:directBootAware="true"
+186-->[androidx.room:room-runtime:2.5.0] /Users/screenmeet/.gradle/caches/8.13/transforms/694cecdf421413852c7d4f48b674920d/transformed/room-runtime-2.5.0/AndroidManifest.xml:26:13-43
+187            android:exported="false" />
+187-->[androidx.room:room-runtime:2.5.0] /Users/screenmeet/.gradle/caches/8.13/transforms/694cecdf421413852c7d4f48b674920d/transformed/room-runtime-2.5.0/AndroidManifest.xml:27:13-37
+188
+189        <receiver
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+190            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+190-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+191            android:directBootAware="false"
+191-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+192            android:enabled="true"
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+193            android:exported="true"
+193-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+194            android:permission="android.permission.DUMP" >
+194-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+195            <intent-filter>
+195-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+196                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+196-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+196-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+197            </intent-filter>
+198            <intent-filter>
+198-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+199                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+199-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+199-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+200            </intent-filter>
+201            <intent-filter>
+201-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+202                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+202-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+202-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+203            </intent-filter>
+204            <intent-filter>
+204-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+205                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+205-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+205-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/screenmeet/.gradle/caches/8.13/transforms/47c414874d91e2a147fded9862cd969f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+206            </intent-filter>
+207        </receiver>
+208    </application>
+209
+210</manifest>

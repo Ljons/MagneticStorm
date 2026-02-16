@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="widget_accent">#FF7BA3FF</color>
+    <color name="widget_bg_end">#FF0D1117</color>
+    <color name="widget_bg_start">#FF1E2A3A</color>
+    <color name="widget_highlight">#12FFFFFF</color>
+    <color name="widget_highlight_end">#00000000</color>
+    <color name="widget_label_color">#FFB8C4D6</color>
+    <color name="widget_slot_bg">#3343474E</color>
+    <color name="widget_updated_color">#FF8D9199</color>
+    <style name="Theme.MagneticStorm" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+    </style>
+</resources>

@@ -49,6 +49,8 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
 string back
+string chart_no_data
+string chart_screen_title
 string choose_location
 string city_country_hint
 string forecast_days
